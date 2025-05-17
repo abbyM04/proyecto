@@ -16,8 +16,8 @@ public class ConsultaImpl implements IConsulta {
     private ConsultaRepository consultaRepository;
 
     @Override
-    public List<ConsultaEntity> findAll() {
-        return consultaRepository.findAll();
+    public List<ConsultaEntity> findByMotivo(String motivo) {
+        return consultaRepository.findByMotivo(motivo);
     }
 
     @Override
