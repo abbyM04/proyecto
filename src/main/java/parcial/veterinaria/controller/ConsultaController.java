@@ -18,9 +18,9 @@ public class ConsultaController {
     private IConsulta iconsulta;
 
     @Transactional(readOnly = true)
-    @GetMapping("/consultas")
-    public List<ConsultaEntity> getProductos() {
-        return iconsulta.findAll();
+    @GetMapping("/ConsultaMotivo/{motivo}")
+    public List<ConsultaEntity> findConsultaByMotivo(@PathVariable("motivo") String motivo) {
+        return iconsulta.findByMotivo(motivo);
     }
 
     @Transactional
@@ -29,3 +29,4 @@ public class ConsultaController {
         return iconsulta.save(consulta);
     }
 }
+

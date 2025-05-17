@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface IConsulta {
 
-    List<ConsultaEntity> findAll();
+    List<ConsultaEntity> findByMotivo(String motivo);
 
     ConsultaEntity save(ConsultaEntity consulta);
 }
